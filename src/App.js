@@ -51,8 +51,8 @@ function App() {
             <ul>
                {
                 users.map((person,i)=>(
-                  <li key={i}>
-                    {person}
+                  <li key={i} className={i%2 === 0 ? "one" :"two"}>
+                    {person.split('').reverse().join('')}
                     <button onClick={()=>deleteBtn(i)}> Delete </button>
                     <button onClick={()=>editBtn(i)}> Edit </button>
                   </li>
